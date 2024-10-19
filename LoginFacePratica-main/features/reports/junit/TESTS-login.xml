@@ -1,0 +1,32 @@
+<testsuite name="login.Login no Facebook" tests="2" errors="0" failures="0" skipped="0" time="25.85091" timestamp="2024-10-13T03:25:57.840839" hostname="NexusLite-PC"><testcase classname="login.Login no Facebook" name="Login com credenciais corretas" status="passed" time="13.300408"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Login com credenciais corretas
+    Given que o usuário está na página de login do Facebook ... passed in 5.557s
+    When o usuário insere um e-mail válido "bddtestesvalidos@outlook.com" ... passed in 0.237s
+    And o usuário insere uma senha válida "testesvalidos1" ... passed in 0.179s
+    And o usuário clica no botão "Entrar" ... passed in 0.048s
+    Then o usuário deve ser redirecionado para a página inicial do Facebook ... passed in 7.278s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Verificando título da página...
+Título verificado com sucesso.
+
+]]>
+</system-out></testcase><testcase classname="login.Login no Facebook" name="Login com credenciais inválidas" status="passed" time="12.550502"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Login com credenciais inválidas
+    Given que o usuário está na página de login do Facebook ... passed in 5.246s
+    When o usuário insere um e-mail inválido "invalido@exemplo.com" ... passed in 0.161s
+    And o usuário insere uma senha inválida "senhaInvalida" ... passed in 0.168s
+    And o usuário clica no botão "Entrar" ... passed in 0.028s
+    Then uma mensagem de erro deve ser exibida ... passed in 6.947s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
